@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imgRDALogo"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        app:srcCompat="@drawable/rda_sl_logo" />
+
+    <TextView
+        android:id="@+id/lblLoginCaption"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/boxUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20sp"
+        android:text="Log into your account"
+        android:textSize="15sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/boxUsername"
+        android:layout_above="@+id/boxPassword"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <EditText
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/boxPassword"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boxPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Sign in" />
+
+    <TextView
+        android:id="@+id/lblNoAccount"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:padding="5dp"
+        android:text="Don't have an account? SIGN UP" />
+
+    <TextView
+        android:id="@+id/txtRDATitleSinhala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgRDALogo"
+        android:layout_centerHorizontal="true"
+        android:text="මාර්ග සංවර්ධන අධිකාරිය​"
+        android:textSize="12sp"
+        android:textColor="@color/secondaryColor"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtRDATitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRDATitleSinhala"
+        android:layout_centerHorizontal="true"
+        android:text="Road Development Authority"
+        android:textSize="18sp"
+        android:textColor="@color/secondaryColor"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
