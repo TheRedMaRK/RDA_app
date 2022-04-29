@@ -17,6 +17,28 @@
         app:srcCompat="@drawable/rda_sl_logo" />
 
     <TextView
+        android:id="@+id/lblRDATitleSinhala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgRDALogo"
+        android:layout_centerHorizontal="true"
+        android:text="මාර්ග සංවර්ධන අධිකාරිය​"
+        android:textSize="12sp"
+        android:textColor="@color/secondaryColor"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblRDATitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblRDATitleSinhala"
+        android:layout_centerHorizontal="true"
+        android:text="Road Development Authority"
+        android:textSize="18sp"
+        android:textColor="@color/secondaryColor"
+        android:textStyle="bold"/>
+
+    <TextView
         android:id="@+id/lblLoginCaption"
         style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
@@ -80,27 +102,5 @@
         android:layout_marginBottom="30dp"
         android:padding="5dp"
         android:text="Don't have an account? SIGN UP" />
-
-    <TextView
-        android:id="@+id/txtRDATitleSinhala"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imgRDALogo"
-        android:layout_centerHorizontal="true"
-        android:text="මාර්ග සංවර්ධන අධිකාරිය​"
-        android:textSize="12sp"
-        android:textColor="@color/secondaryColor"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/txtRDATitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtRDATitleSinhala"
-        android:layout_centerHorizontal="true"
-        android:text="Road Development Authority"
-        android:textSize="18sp"
-        android:textColor="@color/secondaryColor"
-        android:textStyle="bold"/>
 
 </RelativeLayout>
