@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1059527906782",
+    "project_id": "rda-application",
+    "storage_bucket": "rda-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059527906782:android:49b7371ce901bd389db94f",
+        "android_client_info": {
+          "package_name": "com.example.rda_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059527906782-ju175t46du24ht23iuk1debc3n66uigr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4B8O8Hco1cpjCX0tdWlZj6Ihn-9YxOOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059527906782-ju175t46du24ht23iuk1debc3n66uigr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
