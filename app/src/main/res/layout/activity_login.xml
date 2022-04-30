@@ -43,14 +43,14 @@
         style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/boxUsername"
+        android:layout_above="@id/boxEmail"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20sp"
         android:text="Log into your account"
         android:textSize="15sp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/boxUsername"
+        android:id="@+id/boxEmail"
         android:layout_above="@+id/boxPassword"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
@@ -58,10 +58,10 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <EditText
-            android:id="@+id/txtUsername"
+            android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Email"
             android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
