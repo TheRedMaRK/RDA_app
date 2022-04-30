@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">RDA_app</string>
     <string name="signup">SIGN Up</string>
+
+    <!--Set filter dropdown list-->
+    <string-array name="filters">
+        <item>Vehicle</item>
+        <item>Severity</item>
+        <item>Year</item>
+    </string-array>
+
+    <!--Chart type dropdown list-->
+    <string-array name="chart">
+        <item>Pie</item>
+        <item>Bar</item>
+        <item>Line</item>
+    </string-array>
 </resources>

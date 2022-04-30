@@ -103,4 +103,16 @@
         android:padding="5dp"
         android:text="Don't have an account? SIGN UP" />
 
+    <Button
+        android:id="@+id/btnDev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:text="Dev" />
+
 </RelativeLayout>

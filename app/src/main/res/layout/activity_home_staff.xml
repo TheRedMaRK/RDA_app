@@ -27,51 +27,41 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lblVehicleId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="24dp"
-        android:text="Vehicle ID: "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblUser" />
-
-    <TextView
-        android:id="@+id/lblVehicleIdValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:text="------------------"
-        app:layout_constraintStart_toEndOf="@+id/lblVehicleId"
-        app:layout_constraintTop_toBottomOf="@+id/lblUserValue" />
-
-    <TextView
         android:id="@+id/lblLoggedIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
-        android:text="LOGGED IN AS DRIVER"
+        android:text="LOGGED IN AS A ---"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblVehicleIdValue" />
+        app:layout_constraintTop_toBottomOf="@+id/lblUserValue" />
 
     <Button
-        android:id="@+id/btnReportAccident"
+        android:id="@+id/btnNewReports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:text="Report Accident"
-        app:layout_constraintBottom_toTopOf="@+id/btnMyReport"
+        android:layout_marginBottom="64dp"
+        android:text="New Reports"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewedReports"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnMyReport"
+        android:id="@+id/btnViewedReports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="196dp"
-        android:text="My Reports"
+        android:layout_marginBottom="80dp"
+        android:text="Viewed Reports"
+        app:layout_constraintBottom_toTopOf="@+id/btnDetailedReports"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDetailedReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="136dp"
+        android:text="Detailed Reports"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
