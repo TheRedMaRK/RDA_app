@@ -1,29 +1,18 @@
 package com.example.rda_app
 
-import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.rda_app.databinding.ActivityLoginBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.rda_app.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
 
     //ViewBinding
     private lateinit var binding: ActivityMainBinding
 
-    //FireStore
-    private lateinit var fStore: FirebaseFirestore
-
-    //progressDialog
-    private lateinit var progressDialog: ProgressDialog
-
     //FirebaseAuth
     private lateinit var firebaseAuth: FirebaseAuth
-    private var email = ""
-    private var password = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

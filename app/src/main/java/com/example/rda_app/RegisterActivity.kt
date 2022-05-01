@@ -92,10 +92,10 @@ class RegisterActivity : AppCompatActivity() {
                 val email = firebaseUser!!.email
                 val userId = firebaseUser.uid
 
-                val fullName = binding.txtPhone.text.toString()
+                val fullName = binding.txtFullName.text.toString()
                 val regNo = binding.txtRegNo.text.toString()
                 val insurance = binding.txtInsurance.text.toString()
-                val phone =binding.txtPhone.text.toString()
+                val phone = binding.txtPhone.text.toString()
                 val type = "driver"
 
                 fStore = FirebaseFirestore.getInstance()
@@ -104,7 +104,9 @@ class RegisterActivity : AppCompatActivity() {
 
                 Toast.makeText(this, "Registered with $email", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                val intent = Intent(this,HomeUserActivity::class.java)
+                intent.putExtra("name", fullName)
+                intent.putExtra("vid", regNo)
                 startActivity(intent)
                 finish()
             }
@@ -112,7 +114,6 @@ class RegisterActivity : AppCompatActivity() {
                 //Failed to register
                 Toast.makeText(this, "Registration failed due to ${e.message}", Toast.LENGTH_SHORT)
                     .show()
-
             }
     }
 
