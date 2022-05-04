@@ -28,6 +28,7 @@ class ReportAccidentActivity : AppCompatActivity() {
         // Firebase fireStore auth
         fStore = FirebaseFirestore.getInstance()
 
+        // Submit button
         binding.btnSubmit.setOnClickListener {
             submitReport()
         }
