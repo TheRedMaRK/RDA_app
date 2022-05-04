@@ -138,6 +138,7 @@ class LoginActivity : AppCompatActivity() {
 
                     Toast.makeText(this, "Logged in as $email", Toast.LENGTH_SHORT).show()
                 }
+                progressDialog.dismiss()
             }
             .addOnFailureListener { e->
                 //login failed

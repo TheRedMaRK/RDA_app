@@ -114,7 +114,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtIncidentDetails" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imgUpload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imgUpload"
             app:layout_constraintTop_toBottomOf="@+id/btnAddPhotos"
             tools:srcCompat="@tools:sample/avatars" />
 
@@ -140,7 +140,7 @@
             android:text="Submit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@+id/imgUpload" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
