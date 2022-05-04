@@ -18,15 +18,22 @@ class HomeStaffActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // See if the staff member is a police or other
-        val user = intent.getStringExtra("user")
+        when (intent.getStringExtra("user")) {
+            "rda" -> {
+                binding.btnDetailedReports.visibility = View.INVISIBLE
+                binding.lblLoggedIn.text = "LOGGED IN AS RDA STAFF"
+            }
+            "insurance" -> {
+                binding.btnDetailedReports.visibility = View.INVISIBLE
+                binding.lblLoggedIn.text = "LOGGED IN AS INSURANCE STAFF"
+            }
+            "police" -> {
+                binding.lblLoggedIn.text = "LOGGED IN AS POLICE"
+            }
+        }
 
-        if (user == "staff") {
-            binding.btnDetailedReports.visibility = View.INVISIBLE
-            binding.lblLoggedIn.text = "LOGGED IN AS STAFF"
-        }
-        else {
-            binding.lblLoggedIn.text = "LOGGED IN AS POLICE"
-        }
+        // get username
+        binding.lblUserValue.text = intent.getStringExtra("name")
 
         binding.btnDetailedReports.setOnClickListener {
             val intent = Intent(this, DetailedReportsActivity::class.java)

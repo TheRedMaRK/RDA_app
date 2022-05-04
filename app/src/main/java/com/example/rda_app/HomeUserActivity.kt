@@ -15,6 +15,10 @@ class HomeUserActivity : AppCompatActivity() {
         binding = ActivityHomeUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // get username and vehicle id
+        binding.lblUserValue.text = intent.getStringExtra("name")
+        binding.lblVehicleIdValue.text = intent.getStringExtra("vid")
+
         binding.btnReportAccident.setOnClickListener {
             val intent = Intent(this, ReportAccidentActivity::class.java)
             startActivity(intent)

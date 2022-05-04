@@ -34,8 +34,9 @@
             android:id="@+id/txtLocation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="52dp"
-            android:layout_marginLeft="10dp"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lblLocation"
             app:layout_constraintTop_toBottomOf="@+id/lblIncidentInformation" />
@@ -53,8 +54,9 @@
             android:id="@+id/txtDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lblDate"
             app:layout_constraintTop_toBottomOf="@+id/txtLocation" />
@@ -72,8 +74,9 @@
             android:id="@+id/txtTime"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lblTime"
             app:layout_constraintTop_toBottomOf="@+id/txtDate" />
@@ -95,16 +98,18 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lblIncidentDetails" />
 
-        <TextView
-            android:id="@+id/lblAddPhotos"
+        <Button
+            android:id="@+id/btnAddPhotos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Add Photos"
+            android:backgroundTint="@color/secondaryColor"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtIncidentDetails" />
 
@@ -114,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblAddPhotos"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddPhotos"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
@@ -124,7 +129,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/lblAddPhotos"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddPhotos"
             tools:srcCompat="@tools:sample/avatars" />
 
         <Button

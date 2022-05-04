@@ -51,7 +51,6 @@ class LoginActivity : AppCompatActivity() {
 
         //handle click, begin login
         binding.btnLogin.setOnClickListener {
-
             validateData()
         }
 
@@ -97,32 +96,57 @@ class LoginActivity : AppCompatActivity() {
                 fStore = FirebaseFirestore.getInstance()
                 fStore.collection("users").document(userId).get().addOnCompleteListener { task: Task<DocumentSnapshot> ->
                     val document = task.result
-                    val type = document.get("type").toString()
+                    val username = document.get("fullName").toString()
+                    val vehicleId = document.get("regNo").toString()
 
-                    when (type) {
-                        "admin" -> showToast("Webmaster")
-                        "driver" -> showToast("Driver")
-                        "police" -> showToast("Police")
-                        else -> showToast("---INVALID---")
+                    when (document.get("type").toString()) {
+                        "admin" -> {
+                            val intent = Intent(this, WebmasterActivity::class.java)
+                            intent.putExtra("name", username)
+                            startActivity(intent)
+                            finish()
+                        }
+                        "driver" -> {
+                            val intent = Intent(this, HomeUserActivity::class.java)
+                            intent.putExtra("name", username)
+                            intent.putExtra("vid", vehicleId)
+                            startActivity(intent)
+                            finish()
+                        }
+                        "police" -> {
+                            val intent = Intent(this, HomeStaffActivity::class.java)
+                            intent.putExtra("user", "police")
+                            intent.putExtra("name", username)
+                            startActivity(intent)
+                            finish()
+                        }
+                        "rda" -> {
+                            val intent = Intent(this, HomeStaffActivity::class.java)
+                            intent.putExtra("user", "rda")
+                            intent.putExtra("name", username)
+                            startActivity(intent)
+                            finish()
+                        }
+                        "insurance" -> {
+                            val intent = Intent(this, HomeStaffActivity::class.java)
+                            intent.putExtra("user", "insurance")
+                            intent.putExtra("name", username)
+                            startActivity(intent)
+                            finish()
+                        }
                     }
 
-                    Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
-
-                    val intent = Intent(this@LoginActivity,MainActivity::class.java)
-                    intent.putExtra("type", type)
-                    startActivity(intent)
-                    finish()
+                    Toast.makeText(this, "Logged in as $email", Toast.LENGTH_SHORT).show()
                 }
-                    .addOnFailureListener { e->
-                        //login failed
-                        progressDialog.dismiss()
-                        Toast.makeText(this,"Login failed due to ${e.message}",Toast.LENGTH_SHORT).show()
-                    }
+            }
+            .addOnFailureListener { e->
+                //login failed
+                progressDialog.dismiss()
+                Toast.makeText(this,"${e.message}",Toast.LENGTH_SHORT).show()
             }
     }
 
     private fun showToast(msg: String) {
-
         Toast.makeText(this@LoginActivity, "Logged in as $msg", Toast.LENGTH_LONG).show()
     }
 }
