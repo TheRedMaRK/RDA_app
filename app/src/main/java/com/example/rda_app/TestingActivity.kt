@@ -15,6 +15,10 @@ class TestingActivity : AppCompatActivity() {
         binding = ActivityTestingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnWebmaster.setOnClickListener {
+            val intent = Intent(this, WebmasterActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnUser.setOnClickListener {
             val intent = Intent(this, HomeUserActivity::class.java)
             startActivity(intent)

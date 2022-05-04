@@ -54,6 +54,12 @@ class LoginActivity : AppCompatActivity() {
 
             validateData()
         }
+
+        binding.btnDev.setOnClickListener {
+            val intent = Intent(this, TestingActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun validateData() {
