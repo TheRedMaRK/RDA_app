@@ -64,13 +64,13 @@ class AddPoliceFragment : Fragment() {
 
             //validate data
             validateData()
-            clearTextBoxes()
         }
 
         return binding.root
     }
 
     private fun clearTextBoxes() {
+        binding.txtName.text.clear()
         binding.txtDistrict.text.clear()
         binding.txtSP.text.clear()
         binding.txtAddress.text.clear()
@@ -113,6 +113,7 @@ class AddPoliceFragment : Fragment() {
                 val email = firebaseUser!!.email
                 val userId = firebaseUser.uid
 
+                val name = binding.txtName.text.toString()
                 val district = binding.txtDistrict.text.toString()
                 val SP = binding.txtSP.text.toString()
                 val address = binding.txtAddress.text.toString()
@@ -120,8 +121,9 @@ class AddPoliceFragment : Fragment() {
                 val type = "police"
 
                 fStore = FirebaseFirestore.getInstance()
-                val register = AddPolice(district, SP, address, phone, email, type)
+                val register = AddPolice(name, district, SP, address, phone, email, type)
                 fStore.collection("users").document(userId).set(register)
+                clearTextBoxes()
 
                 Toast.makeText(context ,"Registered police with $email", Toast.LENGTH_SHORT).show()
 

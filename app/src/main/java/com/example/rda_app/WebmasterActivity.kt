@@ -3,7 +3,6 @@ package com.example.rda_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.rda_app.databinding.ActivityTestingBinding
 import com.example.rda_app.databinding.ActivityWebmasterBinding
 
 class WebmasterActivity : AppCompatActivity() {
