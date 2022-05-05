@@ -16,6 +16,9 @@
             android:exported="false"
             android:parentActivityName=".HomeUserActivity" />
         <activity
+            android:name=".AddUser"
+            android:exported="false" />
+        <activity
             android:name=".DropdownExample"
             android:exported="false" />
         <activity

@@ -18,6 +18,10 @@ class TestingActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "Testing Activity"
 
+        binding.btnWebmaster.setOnClickListener {
+            val intent = Intent(this, WebmasterActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnUser.setOnClickListener {
             val intent = Intent(this, HomeUserActivity::class.java)
             startActivity(intent)

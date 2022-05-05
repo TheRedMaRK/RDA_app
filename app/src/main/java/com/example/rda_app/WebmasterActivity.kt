@@ -1,6 +1,8 @@
 package com.example.rda_app
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -11,11 +13,11 @@ import kotlinx.android.synthetic.main.activity_home_user.*
 
 class WebmasterActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityWebmasterBinding
     //Gives the ability open the drawer by the Toggle button
     private lateinit var toggle: ActionBarDrawerToggle
     //FirebaseAuth
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var binding: ActivityWebmasterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,11 @@ class WebmasterActivity : AppCompatActivity() {
 
         // get username
         binding.lblUserValue.text = intent.getStringExtra("name")
+
+        binding.btnAddUsers.setOnClickListener {
+            val intent = Intent(this, AddUser::class.java)
+            startActivity(intent)
+        }
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
