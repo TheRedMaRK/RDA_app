@@ -13,6 +13,9 @@ class WebmasterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWebmasterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Webmaster"
 
         // get username
         binding.lblUserValue.text = intent.getStringExtra("name")

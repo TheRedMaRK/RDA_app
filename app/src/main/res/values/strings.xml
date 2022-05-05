@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">RDA_app</string>
     <string name="signup">SIGN Up</string>
+    <string name="long_text">example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text </string>
 
     <!--Set filter dropdown list-->
     <string-array name="filters">

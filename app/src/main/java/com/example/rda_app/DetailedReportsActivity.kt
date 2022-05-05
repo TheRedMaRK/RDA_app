@@ -13,6 +13,9 @@ class DetailedReportsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailedReportsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Detailed Reports"
 
         // Initialize bindings
         val spinnerFilter = binding.spinnerFilter

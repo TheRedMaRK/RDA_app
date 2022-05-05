@@ -16,6 +16,9 @@ class HomeStaffActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeStaffBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Home - Staff"
 
         // See if the staff member is a police or other
         when (intent.getStringExtra("user")) {

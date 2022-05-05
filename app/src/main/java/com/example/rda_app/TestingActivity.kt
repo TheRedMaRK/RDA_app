@@ -14,6 +14,9 @@ class TestingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTestingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Testing Activity"
 
         binding.btnUser.setOnClickListener {
             val intent = Intent(this, HomeUserActivity::class.java)

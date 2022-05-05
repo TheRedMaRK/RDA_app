@@ -14,6 +14,9 @@ class HomeUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Home - User"
 
         // get username and vehicle id
         binding.lblUserValue.text = intent.getStringExtra("name")
@@ -21,6 +24,11 @@ class HomeUserActivity : AppCompatActivity() {
 
         binding.btnReportAccident.setOnClickListener {
             val intent = Intent(this, ReportAccidentActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnMyReport.setOnClickListener {
+            val intent = Intent(this, MyReportsActivity::class.java)
             startActivity(intent)
         }
     }

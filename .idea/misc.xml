@@ -9,11 +9,13 @@
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_home_user.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_login.xml" value="0.3507692307692308" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_main.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_my_reports.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_register.xml" value="0.3507692307692308" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_report_accident.xml" value="0.3507692307692308" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_testing.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_webmaster.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_welcome.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/my_reports_layout.xml" value="0.25271739130434784" />
       </map>
     </option>
   </component>

@@ -28,6 +28,9 @@ class ReportAccidentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityReportAccidentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Report Accident"
 
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
