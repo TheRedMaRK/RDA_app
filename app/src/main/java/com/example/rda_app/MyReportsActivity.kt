@@ -20,7 +20,7 @@ class MyReportsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_my_reports)
         // Top bar
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.title = "My Reports"
+        supportActionBar!!.title = "Add Users"
 
         // getting the recyclerview by its id
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerMyReports)

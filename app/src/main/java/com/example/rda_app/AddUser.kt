@@ -10,9 +10,12 @@ class AddUser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_user)
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "My Reports"
 
-        var viewPager = findViewById(R.id.viewPager) as ViewPager
-        var tablayout = findViewById(R.id.tabLayout) as TabLayout
+        var viewPager = findViewById<ViewPager>(R.id.viewPager)
+        var tablayout = findViewById<TabLayout>(R.id.tabLayout)
 
         val fragmentAdapter = FragmentAdapter(supportFragmentManager)
         fragmentAdapter.addFragment(AddPoliceFragment(),"Police")

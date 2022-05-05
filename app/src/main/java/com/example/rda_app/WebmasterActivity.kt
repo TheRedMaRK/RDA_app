@@ -1,8 +1,6 @@
 package com.example.rda_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
