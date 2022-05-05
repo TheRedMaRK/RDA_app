@@ -2,6 +2,7 @@ package com.example.rda_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rda_app.databinding.ActivityHomeUserBinding
@@ -57,5 +58,13 @@ class HomeUserActivity : AppCompatActivity() {
             true
         }
 
+    }
+
+    // This function is needed for the navigation toggle to work
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -74,6 +74,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="84dp"
             android:text="Report Accident"
+            android:textSize="20sp"
+            style="@style/Widget.Material3.Button"
             app:layout_constraintBottom_toTopOf="@+id/btnMyReport"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -84,6 +86,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="196dp"
             android:text="My Reports"
+            android:textSize="20sp"
+            style="@style/Widget.Material3.Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

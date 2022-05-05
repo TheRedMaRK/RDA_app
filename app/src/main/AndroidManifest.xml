@@ -13,16 +13,19 @@
         android:theme="@style/Theme.RDA_app">
         <activity
             android:name=".MyReportsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeUserActivity" />
         <activity
             android:name=".DropdownExample"
             android:exported="false" />
         <activity
             android:name=".DetailedReportsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeStaffActivity" />
         <activity
             android:name=".TestingActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".WebmasterActivity"
             android:exported="false" />
@@ -31,13 +34,15 @@
             android:exported="false" />
         <activity
             android:name=".ReportAccidentActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeUserActivity" />
         <activity
             android:name=".HomeUserActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
