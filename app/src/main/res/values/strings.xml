@@ -7,6 +7,9 @@
     <string name="location">location</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="logout">logout</string>
 
     <!--Set filter dropdown list-->
     <string-array name="filters">
