@@ -2,6 +2,11 @@
     <string name="app_name">RDA_app</string>
     <string name="signup">SIGN Up</string>
     <string name="long_text">example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text example text </string>
+    <string name="default_date_format">DD/MM/YYYY</string>
+    <string name="default_time_format">00:00</string>
+    <string name="location">location</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 
     <!--Set filter dropdown list-->
     <string-array name="filters">
