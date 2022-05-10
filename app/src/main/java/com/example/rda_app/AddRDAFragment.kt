@@ -113,7 +113,7 @@ class AddRDAFragment : Fragment() {
                 val email = firebaseUser!!.email
                 val userId = firebaseUser.uid
 
-                val name = binding.txtName.text.toString()
+                val fullName = binding.txtName.text.toString()
                 val province = binding.txtProvince.text.toString()
                 val provincialDirector = binding.txtProvincialDirector.text.toString()
                 val address = binding.txtAddress.text.toString()
@@ -121,7 +121,7 @@ class AddRDAFragment : Fragment() {
                 val type = "rda"
 
                 fStore = FirebaseFirestore.getInstance()
-                val register = AddRDA(name, province, provincialDirector, address, phone, email, type)
+                val register = AddRDA(fullName, province, provincialDirector, address, phone, email, type)
                 fStore.collection("users").document(userId).set(register)
                 clearTextBoxes()
 

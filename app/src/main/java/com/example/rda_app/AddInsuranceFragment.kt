@@ -113,7 +113,7 @@ class AddInsuranceFragment : Fragment() {
                 val email = firebaseUser!!.email
                 val userId = firebaseUser.uid
 
-                val name = binding.txtName.text.toString()
+                val fullName = binding.txtName.text.toString()
                 val headOffice = binding.txtHeadOffice.text.toString()
                 val ceo = binding.txtCEO.text.toString()
                 val address = binding.txtAddress.text.toString()
@@ -121,7 +121,7 @@ class AddInsuranceFragment : Fragment() {
                 val type = "insurance"
 
                 fStore = FirebaseFirestore.getInstance()
-                val register = AddInsurance(name, headOffice, ceo, address, phone, email, type)
+                val register = AddInsurance(fullName, headOffice, ceo, address, phone, email, type)
                 fStore.collection("users").document(userId).set(register)
                 clearTextBoxes()
 

@@ -113,7 +113,7 @@ class AddPoliceFragment : Fragment() {
                 val email = firebaseUser!!.email
                 val userId = firebaseUser.uid
 
-                val name = binding.txtName.text.toString()
+                val fullName = binding.txtName.text.toString()
                 val district = binding.txtDistrict.text.toString()
                 val SP = binding.txtSP.text.toString()
                 val address = binding.txtAddress.text.toString()
@@ -121,7 +121,7 @@ class AddPoliceFragment : Fragment() {
                 val type = "police"
 
                 fStore = FirebaseFirestore.getInstance()
-                val register = AddPolice(name, district, SP, address, phone, email, type)
+                val register = AddPolice(fullName, district, SP, address, phone, email, type)
                 fStore.collection("users").document(userId).set(register)
                 clearTextBoxes()
 

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/activity_add_user.xml" value="0.278125" />
+        <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/activity_detailed_reports.xml" value="0.278125" />
+        <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/activity_home_user.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/activity_login.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/activity_main.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/activity_register.xml" value="0.278125" />
@@ -13,19 +15,17 @@
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/fragment_add_insurance.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/fragment_add_police.xml" value="0.25" />
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/fragment_add_r_d_a.xml" value="0.278125" />
+        <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/layout/my_reports_layout.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/menu/add_user_tabs.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/RDA_app/app/src/main/res/menu/bottom_nav_menu.xml" value="0.278125" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_main.xml" value="0.35625" />
-        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_my_reports.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_register.xml" value="0.3507692307692308" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_report_accident.xml" value="0.3507692307692308" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_testing.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_webmaster.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_welcome.xml" value="0.35625" />
-        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/my_reports_layout.xml" value="0.35625" />
-        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/nav_header.xml" value="0.35625" />
-        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/menu/nav_drawer_menu.xml" value="0.28860759493670884" />
+        <entry key="..\:/androidSDK/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.278125" />
       </map>
     </option>
   </component>
