@@ -1,13 +1,15 @@
 package com.example.rda_app
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 
-class MyReportsActivity : AppCompatActivity() {
+class NewReportsActivity : AppCompatActivity(), NewReportsAdapter.OnItemClickListener {
 
     // Database reference
     private lateinit var fStore: FirebaseFirestore
@@ -17,13 +19,13 @@ class MyReportsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_reports)
+        setContentView(R.layout.activity_new_reports)
         // Top bar
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.title = "My Reports"
+        supportActionBar!!.title = "New Reports"
 
         // getting the recyclerview by its id
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerMyReports)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerNewReports)
 
         // ArrayList of class ItemsViewModel
         val data = ArrayList<Report>()
@@ -39,17 +41,19 @@ class MyReportsActivity : AppCompatActivity() {
             val date = result[0]
             val time = result[4]
             val incidentDetails = result[2]
+            val approved = result[1] as Boolean
+            val reportId = result[6]
 
             // this creates a vertical layout Manager
             recyclerView.layoutManager = LinearLayoutManager(this)
 
             // This loop will create 20 Views containing
             // the image with the count of view
-            data.add(Report(userId, location, date, time, incidentDetails))
+            data.add(Report(userId, location, date, time, incidentDetails, approved, reportId))
         }
 
         // This will pass the ArrayList to our Adapter
-        val adapter = MyReportsAdapter(data)
+        val adapter = NewReportsAdapter(data, this)
 
         // Setting the Adapter with the recyclerview
         recyclerView.adapter = adapter
@@ -70,7 +74,7 @@ class MyReportsActivity : AppCompatActivity() {
         // Database reference to the "meeting" collection
         val reportsRef = fStore.collection("reports")
 
-        val query = reportsRef.whereEqualTo("userId", userId)
+        val query = reportsRef.whereEqualTo("approved", false)
         query.get().addOnSuccessListener { documents ->
             for (document in documents) {
                 // id is the meeting id
@@ -79,9 +83,29 @@ class MyReportsActivity : AppCompatActivity() {
                 // println(document.data)
                 dataMap = document.data as HashMap<String, String>
                 dataArray = ArrayList(dataMap.values)
+                dataArray.add(document.id)
                 callback(dataArray)
             }
         }
 
+    }
+
+    // This handles the onclick events for the recyclerview
+    override fun onItemClick(position: Int, text: String, id: String) {
+        Toast.makeText(this, "$text $position clicked", Toast.LENGTH_SHORT).show()
+        println(id)
+        if (text == "Approve") {
+            // Update one field, creating the document if it does not already exist.
+            val data = hashMapOf("approved" to true)
+            fStore.collection("reports").document(id)
+                .set(data, SetOptions.merge())
+            Toast.makeText(this, "Report: $id approved", Toast.LENGTH_SHORT).show()
+        }
+        else if (text == "Reject") {
+            fStore.collection("reports").document(id)
+                .delete()
+                .addOnSuccessListener { Toast.makeText(this, "Report: $id rejected", Toast.LENGTH_SHORT).show() }
+                .addOnFailureListener { Toast.makeText(this, "Report: $id rejection failed", Toast.LENGTH_SHORT).show() }
+        }
     }
 }

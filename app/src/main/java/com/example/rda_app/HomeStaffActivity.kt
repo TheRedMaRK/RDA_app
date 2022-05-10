@@ -44,6 +44,14 @@ class HomeStaffActivity : AppCompatActivity() {
         // get username
         binding.lblUserValue.text = intent.getStringExtra("name")
 
+        binding.btnNewReports.setOnClickListener {
+            val intent = Intent(this, NewReportsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnViewedReports.setOnClickListener {
+            val intent = Intent(this, ViewReportsActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnDetailedReports.setOnClickListener {
             val intent = Intent(this, DetailedReportsActivity::class.java)
             startActivity(intent)

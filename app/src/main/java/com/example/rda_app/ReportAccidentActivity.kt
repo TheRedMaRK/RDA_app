@@ -103,13 +103,15 @@ class ReportAccidentActivity : AppCompatActivity() {
         val date = binding.txtDate.text.toString()
         val time = binding.txtTime.text.toString()
         val incidentDetails = binding.txtIncidentDetails.text.toString()
+        val approved = false
 
         val report = Report(
             userId,
             location,
             date,
             time,
-            incidentDetails
+            incidentDetails,
+            approved
         )
 
         fStore.collection("reports").document().set(report)

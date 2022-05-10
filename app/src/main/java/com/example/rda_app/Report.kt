@@ -5,5 +5,7 @@ data class Report(
     val location: String? = null,
     val date: String? = null,
     val time: String? = null,
-    val incidentDetails: String? = null
+    val incidentDetails: String? = null,
+    val approved: Boolean? = null,
+    val reportId: String? = null
 )

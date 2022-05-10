@@ -12,13 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RDA_app">
         <activity
+            android:name=".ViewReportsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewReportsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyReportsActivity"
             android:exported="false"
             android:parentActivityName=".HomeUserActivity" />
         <activity
             android:name=".AddUser"
             android:exported="false"
-            android:parentActivityName=".WebmasterActivity"/>
+            android:parentActivityName=".WebmasterActivity" />
         <activity
             android:name=".DropdownExample"
             android:exported="false" />
