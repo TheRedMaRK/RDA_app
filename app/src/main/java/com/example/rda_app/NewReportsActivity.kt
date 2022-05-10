@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
@@ -16,6 +17,8 @@ class NewReportsActivity : AppCompatActivity(), NewReportsAdapter.OnItemClickLis
 
     // FirebaseAuth
     private lateinit var firebaseAuth: FirebaseAuth
+
+    lateinit var swipeRefreshLayout: SwipeRefreshLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,13 +39,13 @@ class NewReportsActivity : AppCompatActivity(), NewReportsAdapter.OnItemClickLis
         // this is the only way
         getData { result ->
 
-            val userId = result[5]
-            val location = result[3]
-            val date = result[0]
-            val time = result[4]
-            val incidentDetails = result[2]
+            val userId = result[6]
+            val location = result[4] //4
+            val date = result[0] //0
+            val time = result[5] //5
+            val incidentDetails = result[3] //3
             val approved = result[1] as Boolean
-            val reportId = result[6]
+            val reportId = result[7]
 
             // this creates a vertical layout Manager
             recyclerView.layoutManager = LinearLayoutManager(this)
@@ -57,6 +60,13 @@ class NewReportsActivity : AppCompatActivity(), NewReportsAdapter.OnItemClickLis
 
         // Setting the Adapter with the recyclerview
         recyclerView.adapter = adapter
+
+        swipeRefreshLayout = findViewById(R.id.swipe)
+
+        swipeRefreshLayout.setOnRefreshListener {
+            finish()
+            startActivity(intent)
+        }
     }
 
     // This function is used to callback values retrieved inside the onSuccessListener of firebase retrieval

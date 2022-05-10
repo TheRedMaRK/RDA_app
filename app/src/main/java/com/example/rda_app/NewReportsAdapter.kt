@@ -1,5 +1,6 @@
 package com.example.rda_app
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -67,15 +68,13 @@ class NewReportsAdapter(private val mList: List<Report>, private val listener: O
             if (v == approveButton) {
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position, appText, id)
-                    cardView.visibility = View.INVISIBLE
-                    cardView.layoutParams.height = 0
+                    cardView.setCardBackgroundColor(Color.GREEN)
                 }
             }
             else if (v == rejectButton) {
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position, rejText, id)
-                    cardView.visibility = View.INVISIBLE
-                    cardView.layoutParams.height = 0
+                    cardView.setCardBackgroundColor(Color.RED)
                 }
             }
         }
