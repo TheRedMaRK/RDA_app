@@ -17,6 +17,7 @@ class ReportAccidentActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityReportAccidentBinding
     private lateinit var imageUri : Uri
+    var imageSelected = false
 
     //Database variable declaration
     private lateinit var fStore: FirebaseFirestore
@@ -62,6 +63,7 @@ class ReportAccidentActivity : AppCompatActivity() {
         if (requestCode == 100 && resultCode == RESULT_OK) {
             imageUri = data?.data!!
             binding.imgUpload.setImageURI(imageUri)
+            imageSelected = true
         }
     }
 
@@ -87,14 +89,16 @@ class ReportAccidentActivity : AppCompatActivity() {
         val storageReference = FirebaseStorage.getInstance().getReference("image/$fileName")
 
         // Uploading file to firebase cloud storage
-        storageReference.putFile(imageUri).
-                addOnSuccessListener {
-                    binding.imgUpload.setImageURI(null)
-                    Toast.makeText(this@ReportAccidentActivity, "Successfully uploaded image!", Toast.LENGTH_SHORT).show()
-                    //if (progressDialog.isShowing) progressDialog.dismiss()
-                }.addOnFailureListener{
-                    //if (progressDialog.isShowing) progressDialog.dismiss()
-            Toast.makeText(this@ReportAccidentActivity, "Upload failed", Toast.LENGTH_SHORT).show()
+        if (imageSelected) {
+            storageReference.putFile(imageUri).
+            addOnSuccessListener {
+                binding.imgUpload.setImageURI(null)
+                Toast.makeText(this@ReportAccidentActivity, "Successfully uploaded image!", Toast.LENGTH_SHORT).show()
+                //if (progressDialog.isShowing) progressDialog.dismiss()
+            }.addOnFailureListener{
+                //if (progressDialog.isShowing) progressDialog.dismiss()
+                Toast.makeText(this@ReportAccidentActivity, "Upload failed", Toast.LENGTH_SHORT).show()
+            }
         }
 
         // Other report values

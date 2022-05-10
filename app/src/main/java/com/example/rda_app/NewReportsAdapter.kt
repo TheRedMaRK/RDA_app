@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class NewReportsAdapter(private val mList: List<Report>, private val listener: OnItemClickListener) : RecyclerView.Adapter<NewReportsAdapter.ViewHolder>() {
@@ -44,6 +45,8 @@ class NewReportsAdapter(private val mList: List<Report>, private val listener: O
         val timeView: TextView = itemView.findViewById(R.id.lblTime)
         val incidentDetailsView: TextView = itemView.findViewById(R.id.lblIncidentDetails)
         val hiddenId: TextView = itemView.findViewById(R.id.lblHiddenId)
+        val cardView: CardView = itemView.findViewById(R.id.cardNewReport)
+
         // clickable buttons
         private val approveButton: Button = itemView.findViewById(R.id.btnApprove)
         private val rejectButton: Button = itemView.findViewById(R.id.btnReject)
@@ -64,14 +67,17 @@ class NewReportsAdapter(private val mList: List<Report>, private val listener: O
             if (v == approveButton) {
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position, appText, id)
+                    cardView.visibility = View.INVISIBLE
+                    cardView.layoutParams.height = 0
                 }
             }
             else if (v == rejectButton) {
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position, rejText, id)
+                    cardView.visibility = View.INVISIBLE
+                    cardView.layoutParams.height = 0
                 }
             }
-
         }
     }
 
