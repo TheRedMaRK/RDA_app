@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class NewReportsAdapter(private val mList: List<Report>, private val listener: OnItemClickListener) : RecyclerView.Adapter<NewReportsAdapter.ViewHolder>() {
+class NewReportsAdapter(private val mList: List<Report>, private val listener: NewReportsActivity) : RecyclerView.Adapter<NewReportsAdapter.ViewHolder>() {
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

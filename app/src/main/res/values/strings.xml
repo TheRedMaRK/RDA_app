@@ -15,9 +15,6 @@
     <string-array name="filters">
         <item>userId</item>
         <item>location</item>
-        <item>Vehicle</item>
-        <item>Severity</item>
-        <item>Year</item>
     </string-array>
 
     <!--Chart type dropdown list - UNUSED -->

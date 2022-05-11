@@ -74,7 +74,7 @@ class NewReportsActivity : AppCompatActivity(), NewReportsAdapter.OnItemClickLis
 
         val firebaseUser = firebaseAuth.currentUser
         firebaseUser!!.email
-        val userId = firebaseUser.uid
+        firebaseUser.uid
 
         // Data array and map
         var dataArray: ArrayList<String>
