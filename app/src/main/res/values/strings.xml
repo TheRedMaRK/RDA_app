@@ -28,4 +28,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="approve">Approve</string>
     <string name="reject">Reject</string>
+    <string name="dd_mm_yyyy">DD_MM_YYYY</string>
+    <string name="_00_00">00:00</string>
 </resources>

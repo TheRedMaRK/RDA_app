@@ -34,11 +34,11 @@ class MyReportsActivity : AppCompatActivity() {
         // this is the only way
         getData { result ->
 
-            val userId = result[5]
-            val location = result[3]
+            val userId = result[6]
+            val location = result[4]
             val date = result[0]
-            val time = result[4]
-            val incidentDetails = result[2]
+            val time = result[5]
+            val incidentDetails = result[3]
 
             // this creates a vertical layout Manager
             recyclerView.layoutManager = LinearLayoutManager(this)

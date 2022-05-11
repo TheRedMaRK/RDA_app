@@ -50,15 +50,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lblLocation" />
 
-        <EditText
+        <TextView
             android:id="@+id/txtDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:textAlignment="center"
             android:minHeight="48dp"
+            android:hint="@string/dd_mm_yyyy"
+            android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lblDate"
+            app:layout_constraintStart_toEndOf="@id/lblDate"
             app:layout_constraintTop_toBottomOf="@+id/txtLocation" />
 
         <TextView
@@ -70,15 +73,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lblDate" />
 
-        <EditText
+        <TextView
             android:id="@+id/txtTime"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:textAlignment="center"
             android:minHeight="48dp"
+            android:hint="@string/_00_00"
+            android:inputType="time"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lblTime"
+            app:layout_constraintStart_toEndOf="@id/lblTime"
             app:layout_constraintTop_toBottomOf="@+id/txtDate" />
 
         <TextView
