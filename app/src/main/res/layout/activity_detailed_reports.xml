@@ -10,53 +10,63 @@
         android:id="@+id/lblFilterBy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Filter by"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:text="Filter by" />
 
     <Spinner
         android:id="@+id/spinnerFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblFilterBy"
-        android:padding="10dp"
-        android:entries="@array/filters" />
+        android:entries="@array/filters"
+        android:padding="10dp" />
 
     <TextView
         android:id="@+id/lblChartType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chart Type"
+        android:layout_below="@+id/spinnerFilter"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/spinnerFilter" />
+        android:text="Chart Type" />
 
     <Spinner
         android:id="@+id/spinnerChart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblChartType"
-        android:padding="10dp"
-        android:entries="@array/chart" />
+        android:entries="@array/chart"
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/btnGenerateChart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/spinnerChart"
+        android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:text="Generate Chart" />
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnGenerateChart"/>
+        android:layout_below="@+id/btnGenerateChart" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textSize="30dp"
-        android:text="Chart goes here"/>
+        android:text="Chart goes here"
+        android:textSize="30dp" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:padding="9dp" />
 
 </RelativeLayout>
