@@ -22,41 +22,49 @@
         android:padding="10dp" />
 
     <TextView
-        android:id="@+id/lblChartType"
+        android:id="@+id/lblSetFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerFilter"
         android:layout_marginTop="20dp"
-        android:text="Chart Type" />
+        android:text="Set Filter" />
 
-    <Spinner
-        android:id="@+id/spinnerChart"
+    <EditText
+        android:id="@+id/txtFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblChartType"
-        android:entries="@array/chart"
-        android:padding="10dp" />
+        android:layout_below="@+id/lblSetFilter"
+        android:hint="Type filter here" />
 
     <Button
-        android:id="@+id/btnGenerateChart"
+        android:id="@+id/btnGenerateReports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerChart"
+        android:layout_below="@+id/txtFilter"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
-        android:text="Generate Chart" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Generate Reports" />
 
     <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnGenerateChart" />
+        android:layout_below="@+id/btnGenerateReports" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Chart goes here"
-        android:textSize="30dp" />
+        android:layout_below="@id/divider">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDetailedReports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/detailed_reports_layout" />
+
+    </ScrollView>
 
 </RelativeLayout>
