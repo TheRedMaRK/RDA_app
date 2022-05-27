@@ -125,7 +125,7 @@ class AddRDAFragment : Fragment() {
                 fStore.collection("users").document(userId).set(register)
                 clearTextBoxes()
 
-                Toast.makeText(context ,"Registered police with $email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context ,"Registered RDA staff with $email", Toast.LENGTH_SHORT).show()
 
             }
             .addOnFailureListener { e ->
