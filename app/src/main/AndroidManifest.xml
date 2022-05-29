@@ -12,10 +12,12 @@
         android:theme="@style/Theme.RDA_app">
         <activity
             android:name=".ViewUsersActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".WebmasterActivity"/>
         <activity
             android:name=".ViewDriversActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ViewUsersActivity"/>
         <activity
             android:name=".ViewReportsActivity"
             android:exported="false" />

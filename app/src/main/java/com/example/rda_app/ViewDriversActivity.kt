@@ -19,6 +19,10 @@ class ViewDriversActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_drivers)
 
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "View Drivers"
+
         // getting the recyclerview by its id
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewDrivers)
 
@@ -31,11 +35,11 @@ class ViewDriversActivity : AppCompatActivity() {
         // this is the only way
         getData { result ->
 
-            val username = result[6] //
-            val email = result[4] //
-            val insurance = result[0] //
-            val phone = result[5] //
-            val reg = result[3] //
+            val username = result[3] //3
+            val email = result[5] //5
+            val insurance = result[1] //1
+            val phone = result[2] //2
+            val reg = result[0] //0
 
             // this creates a vertical layout Manager
             recyclerView.layoutManager = LinearLayoutManager(this)
@@ -65,9 +69,9 @@ class ViewDriversActivity : AppCompatActivity() {
 
         fStore = FirebaseFirestore.getInstance()
         // Database reference to the "meeting" collection
-        val reportsRef = fStore.collection("users")
+        val usersRef = fStore.collection("users")
 
-        val query = reportsRef.whereEqualTo("type", "driver")
+        val query = usersRef.whereEqualTo("type", "driver")
         query.get().addOnSuccessListener { documents ->
             for (document in documents) {
                 // id is the meeting id

@@ -15,6 +15,10 @@ class ViewUsersActivity : AppCompatActivity() {
         binding = ActivityViewUsersBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Top bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "View Users"
+
         // Go to activities
         binding.btnDrivers.setOnClickListener {
             startActivity(Intent(this, ViewDriversActivity::class.java))
