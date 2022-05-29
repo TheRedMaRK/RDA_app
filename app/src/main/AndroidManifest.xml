@@ -11,13 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RDA_app">
         <activity
+            android:name=".ViewInsuranceActivity"
+            android:exported="false"
+            android:parentActivityName=".ViewUsersActivity"/>
+        <activity
+            android:name=".ViewRDAActivity"
+            android:exported="false"
+            android:parentActivityName=".ViewUsersActivity"/>
+        <activity
+            android:name=".ViewPoliceActivity"
+            android:exported="false"
+            android:parentActivityName=".ViewUsersActivity"/>
+        <activity
             android:name=".ViewUsersActivity"
             android:exported="false"
-            android:parentActivityName=".WebmasterActivity"/>
+            android:parentActivityName=".WebmasterActivity" />
         <activity
             android:name=".ViewDriversActivity"
             android:exported="false"
-            android:parentActivityName=".ViewUsersActivity"/>
+            android:parentActivityName=".ViewUsersActivity" />
         <activity
             android:name=".ViewReportsActivity"
             android:exported="false" />

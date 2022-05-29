@@ -51,13 +51,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="johndoe@gmail.com"
-            app:layout_constraintBottom_toTopOf="@+id/lblInsurance"
+            app:layout_constraintBottom_toTopOf="@+id/lblAddress"
             app:layout_constraintStart_toEndOf="@+id/lblEmail"
             app:layout_constraintTop_toBottomOf="@+id/lblUsername" />
 
         <TextView
-            android:id="@+id/lblInsurance"
-            android:text="Insurance ID: "
+            android:id="@+id/lblAddress"
+            android:text="Address: "
             android:textStyle="bold"
             android:textSize="20sp"
             android:layout_width="wrap_content"
@@ -67,25 +67,26 @@
             app:layout_constraintTop_toBottomOf="@+id/lblEmail"/>
 
         <TextView
-            android:id="@+id/lblInsuranceValue"
+            android:id="@+id/lblAddressValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="JD8614973516"
+            android:layout_marginBottom="24dp"
+            android:text="123/A, 1st Street, Colombo"
             app:layout_constraintBottom_toTopOf="@+id/lblPhone"
-            app:layout_constraintStart_toEndOf="@+id/lblInsurance"
+            app:layout_constraintStart_toEndOf="@+id/lblAddress"
             app:layout_constraintTop_toBottomOf="@+id/lblEmail" />
 
         <TextView
             android:id="@+id/lblPhone"
-            android:text="Phone: "
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:text="Phone: "
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblInsurance"/>
+            app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
 
         <TextView
             android:id="@+id/lblPhoneValue"
@@ -93,31 +94,52 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="0112345678"
-            app:layout_constraintBottom_toTopOf="@+id/lblReg"
-            app:layout_constraintStart_toEndOf="@+id/lblPhone"
-            app:layout_constraintTop_toBottomOf="@+id/lblInsurance" />
+            app:layout_constraintBottom_toTopOf="@+id/lblDistrict"
+            app:layout_constraintStart_toEndOf="@+id/lblAddress"
+            app:layout_constraintTop_toBottomOf="@+id/lblAddress" />
 
         <TextView
-            android:id="@+id/lblReg"
-            android:text="Registration Number: "
+            android:id="@+id/lblDistrict"
+            android:text="District: "
             android:textStyle="bold"
             android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblPhone"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/lblPhone"/>
 
         <TextView
-            android:id="@+id/lblRegValue"
-            android:text="123sda83621c"
+            android:id="@+id/lblDistrictValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:layout_constraintStart_toEndOf="@+id/lblReg"
-            app:layout_constraintTop_toBottomOf="@+id/lblPhone"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:text="Colombo"
+            app:layout_constraintBottom_toTopOf="@+id/lblSp"
+            app:layout_constraintStart_toEndOf="@+id/lblDistrict"
+            app:layout_constraintTop_toBottomOf="@+id/lblPhone" />
+
+        <TextView
+            android:id="@+id/lblSp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Superintendent: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblDistrict" />
+
+        <TextView
+            android:id="@+id/lblSpValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Watson"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblSp"
+            app:layout_constraintTop_toBottomOf="@+id/lblDistrict" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -26,6 +26,10 @@
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_register.xml" value="0.3507692307692308" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_report_accident.xml" value="0.3507692307692308" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_testing.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_view_drivers.xml" value="0.2923076923076923" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_view_insurance.xml" value="0.2923076923076923" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_view_police.xml" value="0.2923076923076923" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_view_rdaactivity.xml" value="0.2923076923076923" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_view_reports.xml" value="0.2923076923076923" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_view_users.xml" value="0.2923076923076923" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/activity_webmaster.xml" value="0.35625" />
@@ -34,6 +38,10 @@
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/my_reports_layout.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/nav_header.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/new_reports_layout.xml" value="0.2923076923076923" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/view_drivers_layout.xml" value="0.2923076923076923" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/view_insurance_layout.xml" value="0.2923076923076923" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/view_police_layout.xml" value="0.2923076923076923" />
+        <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/view_rda_layout.xml" value="0.2923076923076923" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/layout/view_users_layout.xml" value="0.2923076923076923" />
         <entry key="..\:/AndroidStudioProjects/RDA_app/app/src/main/res/menu/nav_drawer_menu.xml" value="0.28860759493670884" />
       </map>

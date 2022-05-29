@@ -23,5 +23,14 @@ class ViewUsersActivity : AppCompatActivity() {
         binding.btnDrivers.setOnClickListener {
             startActivity(Intent(this, ViewDriversActivity::class.java))
         }
+        binding.btnPolice.setOnClickListener {
+            startActivity(Intent(this, ViewPoliceActivity::class.java))
+        }
+        binding.btnRDA.setOnClickListener {
+            startActivity(Intent(this, ViewRDAActivity::class.java))
+        }
+        binding.btnInsurance.setOnClickListener {
+            startActivity(Intent(this, ViewInsuranceActivity::class.java))
+        }
     }
 }
