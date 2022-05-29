@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="12dp"
+    android:elevation="10dp"
+    app:contentPadding="4dp"
+    app:cardBackgroundColor="@color/primaryLightColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblUsername"
+            android:text="Username: "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/lblUsernameValue"
+            android:text="John Doe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@+id/lblUsername"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/lblEmail"
+            android:text="Email: "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblUsername"/>
+
+        <TextView
+            android:id="@+id/lblEmailValue"
+            android:text="johndoe@gmail.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@+id/lblEmail"
+            app:layout_constraintTop_toBottomOf="@+id/lblUsername"/>
+
+        <TextView
+            android:id="@+id/lblInsurance"
+            android:text="Insurance ID: "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblEmail"/>
+
+        <TextView
+            android:id="@+id/lblInsuranceValue"
+            android:text="JD8614973516"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@+id/lblInsurance"
+            app:layout_constraintTop_toBottomOf="@+id/lblEmail"/>
+
+        <TextView
+            android:id="@+id/lblPhone"
+            android:text="Phone: "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblInsurance"/>
+
+        <TextView
+            android:id="@+id/lblPhoneValue"
+            android:text="0112345678"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@+id/lblPhone"
+            app:layout_constraintTop_toBottomOf="@+id/lblInsurance"/>
+
+        <TextView
+            android:id="@+id/lblReg"
+            android:text="Registration Number: "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblPhone"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/lblRegValue"
+            android:text="123sda83621c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@+id/lblReg"
+            app:layout_constraintTop_toBottomOf="@+id/lblPhone"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

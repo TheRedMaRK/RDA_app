@@ -28,6 +28,11 @@ class WebmasterActivity : AppCompatActivity() {
         // get username
         binding.lblUserValue.text = intent.getStringExtra("name")
 
+        // Go to activities
+        binding.btnViewUsers.setOnClickListener {
+            startActivity(Intent(this, ViewUsersActivity::class.java))
+        }
+
         binding.btnAddUsers.setOnClickListener {
             val intent = Intent(this, AddUser::class.java)
             startActivity(intent)
